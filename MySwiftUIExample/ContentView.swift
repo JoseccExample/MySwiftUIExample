@@ -8,56 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var index:Int = 4 {
-        didSet {
-            print(index)
-        }
-    }
+    
     var body: some View {
-        TabView(selection: $index,
-                content:  {
-                    HStack{
-                        Spacer()
-                        Text("Tab Content 1")
-                        VStack {
-                            Spacer(minLength: 10)
-                            Rectangle().frame(width: 5, height: .infinity, alignment: .center)
-                            Spacer(minLength: 10)
-                        }
-                        Text("Tab Content 1")
-                        Spacer()
-                    }
-                        .tabItem {
-                            VStack {
-                                Image(uiImage: #imageLiteral(resourceName: "icon_nav_food1"))
-                                Text("Tab Label 1")
-                            }
-                        }.tag(1)
-                    Text("Tab Content 2")
-                        .tabItem {
-                            VStack {
-                                Image(uiImage: #imageLiteral(resourceName: "icon_nav_nearby1"))
-                                Text("Tab Label 1")
-                            }
-                        }.tag(2)
-                    Text("Tab Content 3")
-                        .tabItem {
-                            VStack {
-                                Image(uiImage: #imageLiteral(resourceName: "icon_nav_collect1"))
-                                Text("Tab Label 1")
-                            }
-                        }.tag(2)
-                    Text("Tab Content 4")
-                        .tabItem {
-                            VStack {
-                                Image(uiImage: #imageLiteral(resourceName: "icon_nav_qa1"))
-                                Text("Tab Label 1")
-                            }
-                        }.tag(2)
-                    Text("Tab Content 4")
-                        .tabItem {
-                        }.tag(2)
-                })
+        CustomTabView(contents: [
+            ("美食",#imageLiteral(resourceName: "icon_nav_food1"),#imageLiteral(resourceName: "icon_nav_food2"),AnyView(HomeView())),
+            ("附近",#imageLiteral(resourceName: "icon_nav_nearby1"),#imageLiteral(resourceName: "icon_nav_nearby2"),AnyView(NearbyView())),
+            ("收藏",#imageLiteral(resourceName: "icon_nav_collect1"),#imageLiteral(resourceName: "icon_nav_collect2"),AnyView(CollectView())),
+            ("问答",#imageLiteral(resourceName: "icon_nav_qa1"),#imageLiteral(resourceName: "icon_nav_qa2"),AnyView(QuestionView())),
+            ("我的",#imageLiteral(resourceName: "icon_nav_mine1"),#imageLiteral(resourceName: "icon_nav_mine2"),AnyView(MyView())),
+        ], selectColor: .red)
     }
 }
 

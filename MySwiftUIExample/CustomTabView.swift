@@ -6,10 +6,17 @@
 //
 
 import SwiftUI
-
+/// 自定义的Tab
 struct CustomTabView<Content:View>: View {
+    ///需要展示的内容元祖数组
+    /// - Parameter title: 显示标题
+    /// - Parameter image: 默认的显示图片
+    /// - Parameter selectImage: 选中的图片 图片颜色将由`selectColor`设置
+    /// - Parameter content: 对应的内容试图
     let contents:[(title:String, image:UIImage, selectImage:UIImage, content:Content)]
-    @State var tabIndex:Int = 1
+    /// 设置选中图片的前景色
+    let selectColor:UIColor
+    @State var tabIndex:Int = 0
     var body: some View {
         TabView(selection: $tabIndex) {
             ForEach(0 ..< contents.count) { index in
@@ -23,7 +30,7 @@ struct CustomTabView<Content:View>: View {
                     }
                     .tag(index)
             }
-        }
+        }.accentColor(Color(selectColor))
     }
     
 }
@@ -53,6 +60,6 @@ struct CustomTabView_Previews: PreviewProvider {
         CustomTabView(contents: [
             ("首页",#imageLiteral(resourceName: "icon_nav_food1"),#imageLiteral(resourceName: "icon_nav_food2"),Text("1")),
             ("首页",#imageLiteral(resourceName: "icon_nav_food1"),#imageLiteral(resourceName: "icon_nav_food2"),Text("2"))
-        ])
+        ], selectColor: .red)
     }
 }
