@@ -56,7 +56,6 @@ struct ContentView: View {
                         }.tag(2)
                     Text("Tab Content 4")
                         .tabItem {
-                            TabItemView()
                         }.tag(2)
                 })
     }
@@ -70,16 +69,3 @@ struct ContentView_Previews: PreviewProvider {
 
 
 
-
-struct TabItemView: View {
-//    let title:String
-//    let image:UIImage
-    
-    var body: some View {
-        VStack {
-            Image(uiImage: #imageLiteral(resourceName: "icon_nav_mine1"))
-            Spacer(minLength: 10)
-            Text("Tab Label 1")
-        }
-    }
-}

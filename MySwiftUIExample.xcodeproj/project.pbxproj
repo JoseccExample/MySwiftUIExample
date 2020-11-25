@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D7AAA0C256E7A3C00AB30EA /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7AAA0B256E7A3C00AB30EA /* CustomTabView.swift */; };
 		5D7E7810256D4FBB007D32F6 /* MySwiftUIExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E780F256D4FBB007D32F6 /* MySwiftUIExampleApp.swift */; };
 		5D7E7812256D4FBB007D32F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E7811256D4FBB007D32F6 /* ContentView.swift */; };
 		5D7E7814256D4FBC007D32F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D7E7813256D4FBC007D32F6 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D7AAA0B256E7A3C00AB30EA /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		5D7E780C256D4FBB007D32F6 /* MySwiftUIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySwiftUIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D7E780F256D4FBB007D32F6 /* MySwiftUIExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySwiftUIExampleApp.swift; sourceTree = "<group>"; };
 		5D7E7811256D4FBB007D32F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				5D7E780F256D4FBB007D32F6 /* MySwiftUIExampleApp.swift */,
 				5D7E7811256D4FBB007D32F6 /* ContentView.swift */,
+				5D7AAA0B256E7A3C00AB30EA /* CustomTabView.swift */,
 				5D7E7813256D4FBC007D32F6 /* Assets.xcassets */,
 				5D7E7818256D4FBC007D32F6 /* Info.plist */,
 				5D7E7815256D4FBC007D32F6 /* Preview Content */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D7AAA0C256E7A3C00AB30EA /* CustomTabView.swift in Sources */,
 				5D7E7812256D4FBB007D32F6 /* ContentView.swift in Sources */,
 				5D7E7810256D4FBB007D32F6 /* MySwiftUIExampleApp.swift in Sources */,
 			);
