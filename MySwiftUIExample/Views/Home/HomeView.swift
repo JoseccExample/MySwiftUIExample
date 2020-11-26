@@ -11,28 +11,30 @@ import SwiftUIX
 struct HomeView: View {
     @State var inputText:String = ""
     var body: some View {
-        ZStack {
-            NavigationView{
-                Text("Hello, World!")
-                    .background(Color.red)
-                    .frame(maxWidth: .infinity)
-                    .navigationBarColor(.blue)
-                    .navigationBarTitleView(CustomTitleView(),displayMode: .inline)
+        NavigationView{
+            VStack {
+                Text("123")
+                    
+//                Spacer()
             }
+            .navigationBarBackgroundColor(#colorLiteral(red: 0.9450980392, green: 0.2352941176, blue: 0.2352941176, alpha: 1))
+            .navigationBarTitleView(CustomTitleView(),displayMode: .inline)
         }
         
     }
     
-    init() {
-        UINavigationBar.appearance().backgroundColor = .red
-    }
 }
 
 struct CustomTitleView: View {
     @State var searchText:String = ""
     var body: some View {
-        SearchBar(text: $searchText)
-            .frame(width: .infinity, height: .infinity)
+        ZStack {
+            GeometryReader { geo in
+                SearchBarView().frame(width: geo.size.width - 30, height: 35)
+                    .position(x: geo.size.width / 2, y: geo.size.height / 2)
+            }
+        }
+        .frame(width: UIScreen.main.bounds.width, height: 44)
     }
 }
 

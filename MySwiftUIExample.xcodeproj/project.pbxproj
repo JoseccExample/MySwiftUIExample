@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D04CA2A256F604400D2ECC3 /* NavigationConfiguratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D04CA29256F604400D2ECC3 /* NavigationConfiguratorView.swift */; };
+		5D04CA2D256F7A3E00D2ECC3 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D04CA2C256F7A3E00D2ECC3 /* SearchBarView.swift */; };
 		5D74B5C1256EA1DF0076C15A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D74B5C0256EA1DF0076C15A /* HomeView.swift */; };
 		5D74B5C5256EA1EB0076C15A /* NearbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D74B5C4256EA1EB0076C15A /* NearbyView.swift */; };
 		5D74B5C8256EA1FC0076C15A /* CollectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D74B5C7256EA1FC0076C15A /* CollectView.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D04CA29256F604400D2ECC3 /* NavigationConfiguratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfiguratorView.swift; sourceTree = "<group>"; };
+		5D04CA2C256F7A3E00D2ECC3 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		5D74B5C0256EA1DF0076C15A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5D74B5C4256EA1EB0076C15A /* NearbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyView.swift; sourceTree = "<group>"; };
 		5D74B5C7256EA1FC0076C15A /* CollectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectView.swift; sourceTree = "<group>"; };
@@ -55,6 +59,8 @@
 				5D74B5BD256EA1B90076C15A /* Collect */,
 				5D74B5BC256EA1B10076C15A /* Nearby */,
 				5D74B5BB256EA1AB0076C15A /* Home */,
+				5D04CA29256F604400D2ECC3 /* NavigationConfiguratorView.swift */,
+				5D04CA2C256F7A3E00D2ECC3 /* SearchBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,11 +218,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D04CA2D256F7A3E00D2ECC3 /* SearchBarView.swift in Sources */,
 				5D74B5CE256EA20D0076C15A /* MyView.swift in Sources */,
 				5D7AAA0C256E7A3C00AB30EA /* CustomTabView.swift in Sources */,
 				5D74B5C5256EA1EB0076C15A /* NearbyView.swift in Sources */,
 				5D74B5C1256EA1DF0076C15A /* HomeView.swift in Sources */,
 				5D74B5CB256EA2050076C15A /* QuestionView.swift in Sources */,
+				5D04CA2A256F604400D2ECC3 /* NavigationConfiguratorView.swift in Sources */,
 				5D7E7812256D4FBB007D32F6 /* ContentView.swift in Sources */,
 				5D7E7810256D4FBB007D32F6 /* MySwiftUIExampleApp.swift in Sources */,
 				5D74B5C8256EA1FC0076C15A /* CollectView.swift in Sources */,
