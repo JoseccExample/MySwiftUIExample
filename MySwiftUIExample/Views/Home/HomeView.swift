@@ -11,23 +11,28 @@ import SwiftUIX
 struct HomeView: View {
     @State var inputText:String = ""
     var body: some View {
-        NavigationView{
-            Text("Hello, World!")
-                .navigationBarTitleView(CustomTitleView(),displayMode: .inline)
-                .navigationBarColor(.red)
+        ZStack {
+            NavigationView{
+                Text("Hello, World!")
+                    .background(Color.red)
+                    .frame(maxWidth: .infinity)
+                    .navigationBarColor(.blue)
+                    .navigationBarTitleView(CustomTitleView(),displayMode: .inline)
+            }
         }
         
+    }
+    
+    init() {
+        UINavigationBar.appearance().backgroundColor = .red
     }
 }
 
 struct CustomTitleView: View {
+    @State var searchText:String = ""
     var body: some View {
-        HStack {
-            Text("2344")
-                .frame(maxWidth:.infinity)
-                
-        }.frame(maxWidth:.infinity)
-        .background(Color.red)
+        SearchBar(text: $searchText)
+            .frame(width: .infinity, height: .infinity)
     }
 }
 
