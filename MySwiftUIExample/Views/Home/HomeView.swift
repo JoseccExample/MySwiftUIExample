@@ -11,14 +11,14 @@ import SwiftUIX
 struct HomeView: View {
     @State var banners:[SwiftUIApi.Banner.Model] = [] {
         didSet {
-            self.bannerUrls = banners.compactMap({$0.bannerImg})
+            self.bannerModel.urls = banners.compactMap({$0.bannerImg})
         }
     }
-    @State var bannerUrls:[String] = []
+    @ObservedObject var bannerModel:FSPagerBannerView.BannerModel = FSPagerBannerView.BannerModel()
     var body: some View {
         NavigationView{
             VStack(spacing:0) {
-                FSPagerBannerView(urls: $bannerUrls, cornerRadius: 15)
+                FSPagerBannerView(bannerModel: bannerModel, cornerRadius: 15)
                     .padding(EdgeInsets(top: 15, leading: 15, bottom: 0, trailing: 15))
                     .frame(height:pagerSize().height)
                 Spacer()

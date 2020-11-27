@@ -82,39 +82,49 @@ struct FSPagerControlUIView: UIViewRepresentable {
 }
 
 struct FSPagerBannerView: View {
-    var cornerRadius:CGFloat
-    @Binding var urls:[String] {
-        didSet {
-            self.numberOfPages = urls.count
-        }
-    }
-    @State var numberOfPages:Int = 0
-    init(urls:Binding<[String]>, cornerRadius:CGFloat = 0) {
-        self._urls = urls
-        self.cornerRadius = cornerRadius
-    }
+    @StateObject var bannerModel:BannerModel
+    var cornerRadius:CGFloat = 0
     var body: some View {
         ZStack {
             FSPagerUIView()
                 .cornerRadius(cornerRadius: cornerRadius)
-                .urls(urls: urls)
-            VStack {
-                Spacer()
-                FSPagerControlUIView(numberOfPages: numberOfPages)
-                    .frame(width:100, height: 20)
-                    .padding(.bottom, 10)
-                    .background(.red)
+                .urls(urls: bannerModel.urls)
+            Text("\(bannerModel.count)")
+//            VStack {
+//                Spacer()
+//                PageControlView(pageCount: bannerModel.count)
+//                    .fixedSize()
+//                    .background(.clear)
+//            }
+        }
+    }
+}
+
+extension FSPagerBannerView {
+    /// Banner的数据
+    class BannerModel: ObservableObject {
+        /// Banner图片的URL数组
+        @Published var urls:[String] {
+            didSet {
+                self.count = urls.count
             }
+        }
+        /// Banner的数量
+        @Published private(set) var count:Int
+        init(urls:[String] = []) {
+            self.urls = urls
+            self.count = urls.count
         }
     }
 }
 
 struct FSPagerUIView_Previews: PreviewProvider {
-    @State static var url:[String] = [
+    static var urls:[String] = [
         "http://pineal-ai-oss.oss-cn-hongkong.aliyuncs.com/article/image/dc68d8e5d17845b3850dc16f56277522.png",
         "http://pineal-ai-oss.oss-cn-hongkong.aliyuncs.com/article/image/dc68d8e5d17845b3850dc16f56277522.png"
     ]
     static var previews: some View {
-        FSPagerBannerView(urls: $url).previewLayout(.fixed(width: 300, height: 100))
+        FSPagerBannerView(bannerModel: FSPagerBannerView.BannerModel(urls: urls))
+            .previewLayout(.fixed(width: 300, height: 100))
     }
 }
