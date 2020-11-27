@@ -9,20 +9,44 @@ import SwiftUI
 import SwiftUIX
 
 struct HomeView: View {
-    @State var inputText:String = ""
+    @State var banners:[SwiftUIApi.Banner.Model] = [] {
+        didSet {
+            self.bannerUrls = banners.compactMap({$0.bannerImg})
+        }
+    }
+    @State var bannerUrls:[String] = []
     var body: some View {
         NavigationView{
-            VStack {
-                Text("123")
-                    
-//                Spacer()
+            VStack(spacing:0) {
+                FSPagerBannerView(urls: $bannerUrls, cornerRadius: 15)
+                    .padding(EdgeInsets(top: 15, leading: 15, bottom: 0, trailing: 15))
+                    .frame(height:pagerSize().height)
+                Spacer()
             }
             .navigationBarBackgroundColor(#colorLiteral(red: 0.9450980392, green: 0.2352941176, blue: 0.2352941176, alpha: 1))
             .navigationBarTitleView(CustomTitleView(),displayMode: .inline)
-        }
-        
+        }.onAppear(perform: {
+            SwiftUIApi.Banner.request { (models) in
+                guard let models = models else {
+                    return
+                }
+                self.banners = models
+            } failure: { (code, message) in
+                
+            }
+
+        })
     }
     
+    
+    /// 获取首页Banner的大小
+    /// - Returns: CGSize
+    func pagerSize() -> CGSize {
+        let screenSize = UIScreen.main.bounds.size
+        let width = screenSize.width - 30
+        let height = (width / 345) * 100
+        return CGSize(width: width, height: height)
+    }
 }
 
 struct CustomTitleView: View {

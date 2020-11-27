@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5D04CA2A256F604400D2ECC3 /* NavigationConfiguratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D04CA29256F604400D2ECC3 /* NavigationConfiguratorView.swift */; };
 		5D04CA2D256F7A3E00D2ECC3 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D04CA2C256F7A3E00D2ECC3 /* SearchBarView.swift */; };
+		5D65231D25709A1A001B2A10 /* FSPagerView in Frameworks */ = {isa = PBXBuildFile; productRef = 5D65231C25709A1A001B2A10 /* FSPagerView */; };
+		5D65232025709B93001B2A10 /* FSPagerUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D65231F25709B93001B2A10 /* FSPagerUIView.swift */; };
 		5D74B5C1256EA1DF0076C15A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D74B5C0256EA1DF0076C15A /* HomeView.swift */; };
 		5D74B5C5256EA1EB0076C15A /* NearbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D74B5C4256EA1EB0076C15A /* NearbyView.swift */; };
 		5D74B5C8256EA1FC0076C15A /* CollectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D74B5C7256EA1FC0076C15A /* CollectView.swift */; };
@@ -20,11 +22,18 @@
 		5D7E7812256D4FBB007D32F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E7811256D4FBB007D32F6 /* ContentView.swift */; };
 		5D7E7814256D4FBC007D32F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D7E7813256D4FBC007D32F6 /* Assets.xcassets */; };
 		5D7E7817256D4FBC007D32F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D7E7816256D4FBC007D32F6 /* Preview Assets.xcassets */; };
+		5DC6C93F2570F245000360C4 /* Request in Frameworks */ = {isa = PBXBuildFile; productRef = 5DC6C93E2570F245000360C4 /* Request */; };
+		5DC6C9422570F264000360C4 /* SwiftUIApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC6C9412570F264000360C4 /* SwiftUIApi.swift */; };
+		5DC6C9462570FA9D000360C4 /* BannerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC6C9452570FA9D000360C4 /* BannerApi.swift */; };
+		5DC6C94A25710F35000360C4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5DC6C94925710F35000360C4 /* Kingfisher */; };
+		5DC6C94E25711101000360C4 /* UIImageView+Kingfinsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC6C94D25711101000360C4 /* UIImageView+Kingfinsher.swift */; };
+		5DC6C952257116DE000360C4 /* PageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC6C951257116DE000360C4 /* PageControlView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D04CA29256F604400D2ECC3 /* NavigationConfiguratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfiguratorView.swift; sourceTree = "<group>"; };
 		5D04CA2C256F7A3E00D2ECC3 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		5D65231F25709B93001B2A10 /* FSPagerUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPagerUIView.swift; sourceTree = "<group>"; };
 		5D74B5C0256EA1DF0076C15A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5D74B5C4256EA1EB0076C15A /* NearbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyView.swift; sourceTree = "<group>"; };
 		5D74B5C7256EA1FC0076C15A /* CollectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectView.swift; sourceTree = "<group>"; };
@@ -37,6 +46,10 @@
 		5D7E7813256D4FBC007D32F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D7E7816256D4FBC007D32F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5D7E7818256D4FBC007D32F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DC6C9412570F264000360C4 /* SwiftUIApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIApi.swift; sourceTree = "<group>"; };
+		5DC6C9452570FA9D000360C4 /* BannerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerApi.swift; sourceTree = "<group>"; };
+		5DC6C94D25711101000360C4 /* UIImageView+Kingfinsher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfinsher.swift"; sourceTree = "<group>"; };
+		5DC6C951257116DE000360C4 /* PageControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +57,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DC6C94A25710F35000360C4 /* Kingfisher in Frameworks */,
+				5DC6C93F2570F245000360C4 /* Request in Frameworks */,
+				5D65231D25709A1A001B2A10 /* FSPagerView in Frameworks */,
 				5D74B5D2256EA8290076C15A /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D6523222570EE28001B2A10 /* Netowork */ = {
+			isa = PBXGroup;
+			children = (
+				5DC6C9442570FA8A000360C4 /* Banner */,
+				5DC6C9412570F264000360C4 /* SwiftUIApi.swift */,
+			);
+			path = Netowork;
+			sourceTree = "<group>";
+		};
 		5D74B5BA256EA19A0076C15A /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +86,8 @@
 				5D74B5BB256EA1AB0076C15A /* Home */,
 				5D04CA29256F604400D2ECC3 /* NavigationConfiguratorView.swift */,
 				5D04CA2C256F7A3E00D2ECC3 /* SearchBarView.swift */,
+				5D65231F25709B93001B2A10 /* FSPagerUIView.swift */,
+				5DC6C951257116DE000360C4 /* PageControlView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,6 +151,8 @@
 		5D7E780E256D4FBB007D32F6 /* MySwiftUIExample */ = {
 			isa = PBXGroup;
 			children = (
+				5DC6C94C257110B0000360C4 /* Extensions */,
+				5D6523222570EE28001B2A10 /* Netowork */,
 				5D74B5BA256EA19A0076C15A /* Views */,
 				5D7E780F256D4FBB007D32F6 /* MySwiftUIExampleApp.swift */,
 				5D7E7811256D4FBB007D32F6 /* ContentView.swift */,
@@ -141,6 +170,22 @@
 				5D7E7816256D4FBC007D32F6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5DC6C9442570FA8A000360C4 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				5DC6C9452570FA9D000360C4 /* BannerApi.swift */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		5DC6C94C257110B0000360C4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5DC6C94D25711101000360C4 /* UIImageView+Kingfinsher.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +206,9 @@
 			name = MySwiftUIExample;
 			packageProductDependencies = (
 				5D74B5D1256EA8290076C15A /* SwiftUIX */,
+				5D65231C25709A1A001B2A10 /* FSPagerView */,
+				5DC6C93E2570F245000360C4 /* Request */,
+				5DC6C94925710F35000360C4 /* Kingfisher */,
 			);
 			productName = MySwiftUIExample;
 			productReference = 5D7E780C256D4FBB007D32F6 /* MySwiftUIExample.app */;
@@ -191,6 +239,9 @@
 			mainGroup = 5D7E7803256D4FBB007D32F6;
 			packageReferences = (
 				5D74B5D0256EA8290076C15A /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				5D65231B25709A1A001B2A10 /* XCRemoteSwiftPackageReference "FSPagerView" */,
+				5DC6C93D2570F245000360C4 /* XCRemoteSwiftPackageReference "Request" */,
+				5DC6C94825710F35000360C4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 5D7E780D256D4FBB007D32F6 /* Products */;
 			projectDirPath = "";
@@ -218,7 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DC6C9422570F264000360C4 /* SwiftUIApi.swift in Sources */,
+				5DC6C94E25711101000360C4 /* UIImageView+Kingfinsher.swift in Sources */,
+				5DC6C9462570FA9D000360C4 /* BannerApi.swift in Sources */,
 				5D04CA2D256F7A3E00D2ECC3 /* SearchBarView.swift in Sources */,
+				5D65232025709B93001B2A10 /* FSPagerUIView.swift in Sources */,
 				5D74B5CE256EA20D0076C15A /* MyView.swift in Sources */,
 				5D7AAA0C256E7A3C00AB30EA /* CustomTabView.swift in Sources */,
 				5D74B5C5256EA1EB0076C15A /* NearbyView.swift in Sources */,
@@ -228,6 +283,7 @@
 				5D7E7812256D4FBB007D32F6 /* ContentView.swift in Sources */,
 				5D7E7810256D4FBB007D32F6 /* MySwiftUIExampleApp.swift in Sources */,
 				5D74B5C8256EA1FC0076C15A /* CollectView.swift in Sources */,
+				5DC6C952257116DE000360C4 /* PageControlView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +472,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5D65231B25709A1A001B2A10 /* XCRemoteSwiftPackageReference "FSPagerView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSPagerView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		5D74B5D0256EA8290076C15A /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
@@ -424,13 +488,44 @@
 				kind = branch;
 			};
 		};
+		5DC6C93D2570F245000360C4 /* XCRemoteSwiftPackageReference "Request" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/josercc/Request";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+		5DC6C94825710F35000360C4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.7;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5D65231C25709A1A001B2A10 /* FSPagerView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D65231B25709A1A001B2A10 /* XCRemoteSwiftPackageReference "FSPagerView" */;
+			productName = FSPagerView;
+		};
 		5D74B5D1256EA8290076C15A /* SwiftUIX */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5D74B5D0256EA8290076C15A /* XCRemoteSwiftPackageReference "SwiftUIX" */;
 			productName = SwiftUIX;
+		};
+		5DC6C93E2570F245000360C4 /* Request */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DC6C93D2570F245000360C4 /* XCRemoteSwiftPackageReference "Request" */;
+			productName = Request;
+		};
+		5DC6C94925710F35000360C4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DC6C94825710F35000360C4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
