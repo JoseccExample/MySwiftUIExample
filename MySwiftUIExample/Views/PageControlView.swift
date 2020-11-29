@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct PageControlView: View {
-    @State var pageCount:Int = 0
-    @State var currentIndex:Int = 0
-    var pageColor:UIColor = #colorLiteral(red: 0.9607843137, green: 0.9607843137, blue: 0.9607843137, alpha: 1)
-    var currentPageColor:UIColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    var pageCount:Int = 0
+    @Binding var currentIndex:Int
+    var pageColor:UIColor = #colorLiteral(red: 0.9607843137, green: 0.9607843137, blue: 0.9607843137, alpha: 0.5)
+    var currentPageColor:UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     var pageHeight:CGFloat = 4
     var body: some View {
         HStack(spacing:3) {
-            ForEach(0 ..< pageCount) { index in
+            ForEach(0 ..< pageCount, id: \.self) { index in
                 RoundedRectangle(cornerRadius: pageHeight / 2)
                     .foregroundColor(Color(pageCorlor(index: index)))
                     .frame(width:pageHeight, height:pageHeight)
             }
-        }
+        }.fixedSize()
     }
     
     func pageCorlor(index:Int) -> UIColor {
@@ -29,7 +29,9 @@ struct PageControlView: View {
 }
 
 struct PageControlView_Previews: PreviewProvider {
+    @State static var currentIndex:Int = 0
     static var previews: some View {
-        PageControlView(pageCount: 4, pageHeight: 4).previewLayout(.sizeThatFits)
+        PageControlView(pageCount: 4, currentIndex: $currentIndex, pageHeight: 100).previewLayout(.sizeThatFits)
+            .background(.red)
     }
 }

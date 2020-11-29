@@ -28,6 +28,7 @@
 		5DC6C94A25710F35000360C4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5DC6C94925710F35000360C4 /* Kingfisher */; };
 		5DC6C94E25711101000360C4 /* UIImageView+Kingfinsher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC6C94D25711101000360C4 /* UIImageView+Kingfinsher.swift */; };
 		5DC6C952257116DE000360C4 /* PageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC6C951257116DE000360C4 /* PageControlView.swift */; };
+		5DD7432725734FD900A38F7F /* HomeCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD7432625734FD900A38F7F /* HomeCategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		5DC6C9452570FA9D000360C4 /* BannerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerApi.swift; sourceTree = "<group>"; };
 		5DC6C94D25711101000360C4 /* UIImageView+Kingfinsher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfinsher.swift"; sourceTree = "<group>"; };
 		5DC6C951257116DE000360C4 /* PageControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlView.swift; sourceTree = "<group>"; };
+		5DD7432625734FD900A38F7F /* HomeCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				5D74B5C0256EA1DF0076C15A /* HomeView.swift */,
+				5DD7432625734FD900A38F7F /* HomeCategoryView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				5DC6C9422570F264000360C4 /* SwiftUIApi.swift in Sources */,
 				5DC6C94E25711101000360C4 /* UIImageView+Kingfinsher.swift in Sources */,
 				5DC6C9462570FA9D000360C4 /* BannerApi.swift in Sources */,
+				5DD7432725734FD900A38F7F /* HomeCategoryView.swift in Sources */,
 				5D04CA2D256F7A3E00D2ECC3 /* SearchBarView.swift in Sources */,
 				5D65232025709B93001B2A10 /* FSPagerUIView.swift in Sources */,
 				5D74B5CE256EA20D0076C15A /* MyView.swift in Sources */,

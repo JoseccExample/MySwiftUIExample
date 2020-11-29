@@ -18,7 +18,11 @@ struct HomeView: View {
     var body: some View {
         NavigationView{
             VStack(spacing:0) {
-                FSPagerBannerView(bannerModel: bannerModel, cornerRadius: 15)
+                FSPagerBannerView(bannerModel: bannerModel,
+                                  cornerRadius: 15,
+                                  didSelectItemAt: { (index) in
+                                    print("banner index \(index)")
+                                  })
                     .padding(EdgeInsets(top: 15, leading: 15, bottom: 0, trailing: 15))
                     .frame(height:pagerSize().height)
                 Spacer()
@@ -26,16 +30,20 @@ struct HomeView: View {
             .navigationBarBackgroundColor(#colorLiteral(red: 0.9450980392, green: 0.2352941176, blue: 0.2352941176, alpha: 1))
             .navigationBarTitleView(CustomTitleView(),displayMode: .inline)
         }.onAppear(perform: {
-            SwiftUIApi.Banner.request { (models) in
-                guard let models = models else {
-                    return
-                }
-                self.banners = models
-            } failure: { (code, message) in
-                
-            }
-
+            requestBannerData()
         })
+    }
+    
+    /// 请求首页的Banner数据
+    func requestBannerData() {
+        SwiftUIApi.Banner.request { (models) in
+            guard let models = models else {
+                return
+            }
+            self.banners = models
+        } failure: { (code, message) in
+            
+        }
     }
     
     
