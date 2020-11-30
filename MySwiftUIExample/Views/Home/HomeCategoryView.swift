@@ -9,12 +9,11 @@ import SwiftUI
 
 struct HomeCategoryView: View {
     var body: some View {
-        LazyHGrid(rows: [GridItem(.fixed(0), spacing: 0, alignment: .center)], spacing:27) {
-            Text("Placeholder")
-            Text("Placeholder")
-            Text("Placeholder")
-            Text("Placeholder")
-            Text("Placeholder")
+        LazyVGrid(columns: [GridItem(),GridItem(),GridItem(),GridItem(),GridItem()]) {
+            ForEach(0 ..< 10) { index in
+                Rectangle()
+                    .frame(width:44, height: 42)
+            }
         }
     }
 }
